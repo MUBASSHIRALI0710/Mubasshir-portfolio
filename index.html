@@ -5,33 +5,59 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mubasshir Ali – Full Stack Developer</title>
-  <link rel="stylesheet" href="css/style.css">
   <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
     rel="stylesheet">
-  <!-- Font Awesome for icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-  <!-- Navbar placeholder -->
+  <!-- Navbar Start -->
   <nav class="navbar">
     <div class="nav-container">
-      <div class="logo">Mubasshir Ali</div>
+      <!-- Logo -->
+      <a href="index.html" class="logo">Mubasshir Ali</a>
+
+      <!-- Desktop Navigation Menu -->
       <ul class="nav-menu">
-        <li><a href="#home">Home</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="skills.html">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-      <div class="hamburger"><i class="fas fa-bars"></i></div>
+
+      <!-- Right side elements (theme toggle + hamburger) -->
+      <div class="nav-right">
+        <!-- Theme Toggle -->
+        <div class="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </div>
+
+        <!-- Hamburger Icon (visible only on mobile) -->
+        <div class="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
     </div>
+
+    <!-- Mobile Navigation Menu (hidden by default) -->
+    <ul class="nav-menu-mobile">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </nav>
-  <header>...</header>
-  <!-- Hero section -->
-  <section class="hero">
+  <!-- Navbar End -->
+
+  <!-- Hero Section Start -->
+  <section class="hero" id="home">
     <div class="hero-container">
       <div class="hero-content">
         <h1 class="hero-title">
@@ -51,14 +77,16 @@
       </div>
       <div class="hero-image">
         <div class="profile-pic-wrapper">
-          <img src="assets/images/profile-placeholder.jpg" alt="Mubasshir Ali" class="profile-pic">
-          <div class="profile-glow"></div>
+          <div class="orbiting-dots"></div>
+          <img src="assets/images/profile-placeholder.jpg" alt="Mubasshir Ali – Full Stack Developer"
+            class="profile-pic">
         </div>
-        <!-- Optional: floating code animation or laptop illustration -->
       </div>
     </div>
   </section>
-  <!-- Other sections will come later -->
+  <!-- Hero Section End -->
+
+  <!-- JavaScript -->
   <script src="js/main.js"></script>
 </body>
 
