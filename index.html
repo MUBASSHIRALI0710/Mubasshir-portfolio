@@ -19,45 +19,40 @@
   <!-- Navbar Start -->
   <nav class="navbar">
     <div class="nav-container">
-      <!-- Logo -->
       <a href="index.html" class="logo">Mubasshir Ali</a>
 
-      <!-- Desktop Navigation Menu -->
+      <!-- Desktop Menu -->
       <ul class="nav-menu">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
 
-      <!-- Right side elements (theme toggle + hamburger) -->
       <div class="nav-right">
-        <!-- Theme Toggle -->
         <div class="theme-toggle">
           <i class="fas fa-moon"></i>
         </div>
-
-        <!-- Hamburger Icon (visible only on mobile) -->
         <div class="hamburger">
           <i class="fas fa-bars"></i>
         </div>
       </div>
     </div>
 
-    <!-- Mobile Navigation Menu (hidden by default) -->
+    <!-- Mobile Menu -->
     <ul class="nav-menu-mobile">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="skills.html">Skills</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
-  <!-- Navbar End -->
 
-  <!-- Hero Section Start -->
+  <!-- Hero Section (from Day 1) -->
   <section class="hero" id="home">
+    <!-- Your existing hero code -->
     <div class="hero-container">
       <div class="hero-content">
         <h1 class="hero-title">
@@ -70,23 +65,545 @@
           My goal is to create technology that solves real-world problems.
         </p>
         <div class="hero-buttons">
-          <a href="projects.html" class="btn btn-primary">View Projects</a>
+          <a href="#projects" class="btn btn-primary">View Projects</a>
           <a href="assets/resume.pdf" class="btn btn-secondary" download>Download Resume</a>
-          <a href="contact.html" class="btn btn-outline">Contact Me</a>
+          <a href="#contact" class="btn btn-outline">Contact Me</a>
         </div>
       </div>
       <div class="hero-image">
         <div class="profile-pic-wrapper">
           <div class="orbiting-dots"></div>
-          <img src="assets/images/profile-placeholder.jpg" alt="Mubasshir Ali – Full Stack Developer"
-            class="profile-pic">
+          <img src="assets/images/profile-placeholder.jpg" alt="Mubasshir Ali" class="profile-pic">
         </div>
       </div>
     </div>
   </section>
-  <!-- Hero Section End -->
 
-  <!-- JavaScript -->
+  <!-- ===== DAY 2 SECTIONS START ===== -->
+
+  <!-- About Preview Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">About <span class="highlight">Me</span></h2>
+        <p class="section-subtitle">Get to know who I am and what I do</p>
+      </div>
+      <div class="about-content">
+        <div class="about-image">
+          <img src="assets/images/profile-placeholder.jpg" alt="Mubasshir Ali" class="about-img">
+        </div>
+        <div class="about-text">
+          <h3>I'm <span class="highlight">Mubasshir Ali</span>, Full Stack Developer</h3>
+          <p>I am a Computer Science graduate from Dream Institute of Technology. I specialize in building full-stack
+            web applications using JavaScript, Node.js, and modern web technologies.</p>
+          <p>Currently I am focused on building software products and scalable web applications. My long-term goal is to
+            build impactful technology products and work at top technology companies.</p>
+
+          <div class="about-info">
+            <div class="info-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Location: India</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-graduation-cap"></i>
+              <span>Education: B.Tech Computer Science</span>
+            </div>
+            <div class="info-item">
+              <i class="fas fa-star"></i>
+              <span>CGPA: 8.75</span>
+            </div>
+          </div>
+
+          <a href="about.html" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Preview Section -->
+  <section class="skills" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">My <span class="highlight">Skills</span></h2>
+        <p class="section-subtitle">Technologies I work with</p>
+      </div>
+
+      <div class="skills-categories">
+        <!-- Frontend -->
+        <div class="skill-category">
+          <h3 class="category-title"><i class="fas fa-code"></i> Frontend</h3>
+          <div class="skill-items">
+            <div class="skill-item" data-progress="90">
+              <div class="skill-info">
+                <span class="skill-name">HTML5</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item" data-progress="85">
+              <div class="skill-info">
+                <span class="skill-name">CSS3</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item" data-progress="80">
+              <div class="skill-info">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-percent">80%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item" data-progress="75">
+              <div class="skill-info">
+                <span class="skill-name">Responsive Design</span>
+                <span class="skill-percent">75%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-category">
+          <h3 class="category-title"><i class="fas fa-server"></i> Backend</h3>
+          <div class="skill-items">
+            <div class="skill-item" data-progress="85">
+              <div class="skill-info">
+                <span class="skill-name">Node.js</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item" data-progress="80">
+              <div class="skill-info">
+                <span class="skill-name">Express.js</span>
+                <span class="skill-percent">80%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 80%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item" data-progress="75">
+              <div class="skill-info">
+                <span class="skill-name">Java</span>
+                <span class="skill-percent">75%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill-category">
+          <h3 class="category-title"><i class="fas fa-tools"></i> Tools</h3>
+          <div class="skill-items">
+            <div class="skill-item" data-progress="90">
+              <div class="skill-info">
+                <span class="skill-name">Git</span>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 90%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item" data-progress="85">
+              <div class="skill-info">
+                <span class="skill-name">VS Code</span>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 85%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item" data-progress="80">
+              <div class="skill-info">
+                <span class="skill-name">GitHub</span>
+                <span class="skill-percent">80%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Learning -->
+        <div class="skill-category">
+          <h3 class="category-title"><i class="fas fa-book-open"></i> Learning</h3>
+          <div class="skill-items">
+            <div class="skill-item" data-progress="50">
+              <div class="skill-info">
+                <span class="skill-name">Machine Learning</span>
+                <span class="skill-percent">50%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 50%"></div>
+              </div>
+            </div>
+
+            <div class="skill-item" data-progress="40">
+              <div class="skill-info">
+                <span class="skill-name">Cloud Computing</span>
+                <span class="skill-percent">40%</span>
+              </div>
+              <div class="progress-bar">
+                <div class="progress-fill" style="width: 40%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="skills-footer">
+        <a href="skills.html" class="btn btn-outline">View All Skills</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section class="projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Featured <span class="highlight">Projects</span></h2>
+        <p class="section-subtitle">Some of my best work</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-badge">Featured</div>
+          <div class="project-img">
+            <img src="assets/images/project1.jpg" alt="Student Management System"
+              onerror="this.src='https://via.placeholder.com/600x400/1E293B/3B82F6?text=Student+Management'">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Student Management System</h3>
+            <p class="project-desc">A web application designed for schools and coaching institutes to manage students,
+              attendance, and records.</p>
+            <div class="project-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+              <span>Node.js</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn-primary btn-sm">Live Demo</a>
+              <a href="#" class="btn btn-outline btn-sm">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-img">
+            <img src="assets/images/project2.jpg" alt="Diabetes Prediction"
+              onerror="this.src='https://via.placeholder.com/600x400/1E293B/22C55E?text=Diabetes+Prediction'">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Diabetes Prediction ML</h3>
+            <p class="project-desc">Machine Learning model that predicts the probability of diabetes based on medical
+              input parameters.</p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Scikit-learn</span>
+              <span>Pandas</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn-primary btn-sm">Live Demo</a>
+              <a href="#" class="btn btn-outline btn-sm">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-badge coming-soon">Coming Soon</div>
+          <div class="project-img">
+            <img src="assets/images/project3.jpg" alt="Coaching Institute SaaS"
+              onerror="this.src='https://via.placeholder.com/600x400/1E293B/8B5CF6?text=Coaching+SaaS'">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title">Coaching Institute SaaS</h3>
+            <p class="project-desc">A SaaS platform designed for coaching institutes to manage students, fees,
+              attendance and performance.</p>
+            <div class="project-tech">
+              <span>MongoDB</span>
+              <span>Express</span>
+              <span>React</span>
+              <span>Node.js</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn-primary btn-sm disabled">In Development</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects-footer">
+        <a href="projects.html" class="btn btn-primary">View All Projects</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Achievements Section -->
+  <section class="achievements">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">My <span class="highlight">Achievements</span></h2>
+        <p class="section-subtitle">Numbers that speak for themselves</p>
+      </div>
+
+      <div class="achievements-grid">
+        <div class="achievement-card">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>8.75 CGPA</h3>
+          <p>B.Tech Computer Science</p>
+        </div>
+
+        <div class="achievement-card">
+          <i class="fab fa-youtube"></i>
+          <h3>1+</h3>
+          <p>YouTube Subscribers</p>
+        </div>
+
+        <div class="achievement-card">
+          <i class="fas fa-code-branch"></i>
+          <h3>10+</h3>
+          <p>Projects Completed</p>
+        </div>
+
+        <div class="achievement-card">
+          <i class="fas fa-certificate"></i>
+          <h3>5+</h3>
+          <p>Certifications</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What I'm Building Section -->
+  <section class="building">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">What I'm <span class="highlight">Building</span></h2>
+        <p class="section-subtitle">Current projects and focus areas</p>
+      </div>
+
+      <div class="building-grid">
+        <div class="building-card">
+          <div class="building-icon">
+            <i class="fas fa-school"></i>
+          </div>
+          <h3>Student Management SaaS</h3>
+          <div class="progress-container">
+            <div class="progress-label">
+              <span>Progress</span>
+              <span>70%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 70%"></div>
+            </div>
+          </div>
+          <p class="building-desc">Complete student management system with attendance, fees, and performance tracking.
+          </p>
+          <div class="building-tech">
+            <span>MERN Stack</span>
+          </div>
+        </div>
+
+        <div class="building-card">
+          <div class="building-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <h3>Portfolio Builder</h3>
+          <div class="progress-container">
+            <div class="progress-label">
+              <span>Progress</span>
+              <span>40%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 40%"></div>
+            </div>
+          </div>
+          <p class="building-desc">A tool for students to create professional portfolios easily.</p>
+          <div class="building-tech">
+            <span>React</span>
+            <span>Node.js</span>
+          </div>
+        </div>
+
+        <div class="building-card">
+          <div class="building-icon">
+            <i class="fas fa-heartbeat"></i>
+          </div>
+          <h3>ML Health Predictor</h3>
+          <div class="progress-container">
+            <div class="progress-label">
+              <span>Progress</span>
+              <span>60%</span>
+            </div>
+            <div class="progress-bar">
+              <div class="progress-fill" style="width: 60%"></div>
+            </div>
+          </div>
+          <p class="building-desc">Machine learning models for health prediction and analysis.</p>
+          <div class="building-tech">
+            <span>Python</span>
+            <span>Flask</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Highlights Section -->
+  <section class="blog">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Latest <span class="highlight">Blog Posts</span></h2>
+        <p class="section-subtitle">Thoughts and tutorials</p>
+      </div>
+
+      <div class="blog-grid">
+        <div class="blog-card">
+          <div class="blog-date">March 10, 2026</div>
+          <h3 class="blog-title">How I Built a Student Management System</h3>
+          <p class="blog-excerpt">A step-by-step guide to creating a full-stack student management application with
+            JavaScript and Node.js...</p>
+          <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-date">March 5, 2026</div>
+          <h3 class="blog-title">JavaScript Tips for Beginners</h3>
+          <p class="blog-excerpt">Essential JavaScript concepts and tricks that every beginner should know to write
+            better code...</p>
+          <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="blog-card">
+          <div class="blog-date">February 28, 2026</div>
+          <h3 class="blog-title">My Journey into Machine Learning</h3>
+          <p class="blog-excerpt">How a full-stack developer started learning ML and built his first prediction model...
+          </p>
+          <a href="#" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+
+      <div class="blog-footer">
+        <a href="blog.html" class="btn btn-outline">View All Posts</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
+        <p class="section-subtitle">Let's work together</p>
+      </div>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Location</h4>
+              <p>India</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <p>mubasshir.ali@example.com</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <div>
+              <h4>LinkedIn</h4>
+              <p>/in/mubasshirali</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <div>
+              <h4>GitHub</h4>
+              <p>/MUBASSHIRALI0710</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">Mubasshir Ali</div>
+        <p class="footer-text">Building technology that solves real-world problems</p>
+
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <div class="footer-links">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-copyright">
+          <p>&copy; 2026 Mubasshir Ali. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
   <script src="js/main.js"></script>
 </body>
 

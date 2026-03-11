@@ -154,3 +154,36 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+// ===== INTERSECTION OBSERVER FOR SCROLL ANIMATIONS =====
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('in-view');
+
+      // Animate progress bars when in view
+      if (entry.target.classList.contains('skill-item')) {
+        const progressFill = entry.target.querySelector('.progress-fill');
+        const percent = entry.target.dataset.progress;
+        if (progressFill && percent) {
+          progressFill.style.width = percent + '%';
+        }
+      }
+    }
+  });
+}, observerOptions);
+
+// Observe all sections and elements you want to animate
+document.querySelectorAll('section, .skill-item, .project-card, .achievement-card, .building-card, .blog-card').forEach(el => {
+  observer.observe(el);
+});
+
+// Initialize progress bars with 0 width then animate
+document.querySelectorAll('.skill-item .progress-fill').forEach(fill => {
+  fill.style.width = '0';
+});
