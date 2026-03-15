@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Mubasshir Ali | Developer Blog</title>
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
+    rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">Mubasshir Ali</a>
+
+      <!-- Desktop Menu -->
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="theme-toggle">
+          <i class="fas fa-moon"></i>
+        </div>
+        <div class="hamburger">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <ul class="nav-menu-mobile">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <div class="container">
+      <h1 class="page-title">My <span class="highlight">Blog</span></h1>
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> / <span>Blog</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Categories -->
+  <section class="blog-categories">
+    <div class="container">
+      <div class="category-tags">
+        <span class="category-tag active">All</span>
+        <span class="category-tag">JavaScript</span>
+        <span class="category-tag">Python</span>
+        <span class="category-tag">Web Dev</span>
+        <span class="category-tag">Machine Learning</span>
+        <span class="category-tag">Career</span>
+        <span class="category-tag">Tutorials</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Posts Grid -->
+  <section class="blog-page">
+    <div class="container">
+      <div class="blog-grid-page">
+        <!-- Blog Post 1 - Featured -->
+        <div class="blog-card-large featured">
+
+          <div class="blog-card-img">
+            <img src="https://placehold.co/800x500/1E293B/3B82F6?text=Student+Management+System+Tutorial"
+              alt="Student Management System Tutorial">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta">
+              <span class="blog-date"><i class="far fa-calendar"></i> March 10, 2026</span>
+              <span class="blog-category"><i class="far fa-folder"></i> JavaScript</span>
+              <span class="blog-read-time"><i class="far fa-clock"></i> 8 min read</span>
+            </div>
+            <h2 class="blog-card-title">How I Built a Student Management System with JavaScript</h2>
+            <p class="blog-card-excerpt">A complete step-by-step guide to creating a full-stack student management
+              application using vanilla JavaScript, Node.js, and MongoDB. Learn how to implement CRUD operations,
+              authentication, and real-time updates.</p>
+            <div class="blog-tags">
+              <span>JavaScript</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+              <span>Express</span>
+            </div>
+            <a href="#" class="blog-read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Blog Post 2 -->
+        <div class="blog-card-large">
+          <div class="blog-card-img">
+            <img src="https://placehold.co/800x500/1E293B/22C55E?text=JavaScript+Tips" alt="JavaScript Tips">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta">
+              <span class="blog-date"><i class="far fa-calendar"></i> March 5, 2026</span>
+              <span class="blog-category"><i class="far fa-folder"></i> JavaScript</span>
+              <span class="blog-read-time"><i class="far fa-clock"></i> 5 min read</span>
+            </div>
+            <h2 class="blog-card-title">10 JavaScript Tips and Tricks Every Beginner Should Know</h2>
+            <p class="blog-card-excerpt">Essential JavaScript concepts and tricks that will help you write cleaner, more
+              efficient code. From array methods to destructuring and optional chaining.</p>
+            <div class="blog-tags">
+              <span>JavaScript</span>
+              <span>ES6+</span>
+              <span>Tips</span>
+            </div>
+            <a href="#" class="blog-read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Blog Post 3 -->
+        <div class="blog-card-large">
+          <div class="blog-card-img">
+            <img src="https://placehold.co/800x500/1E293B/8B5CF6?text=Machine+Learning+Journey"
+              alt="Machine Learning Journey">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta">
+              <span class="blog-date"><i class="far fa-calendar"></i> February 28, 2026</span>
+              <span class="blog-category"><i class="far fa-folder"></i> ML</span>
+              <span class="blog-read-time"><i class="far fa-clock"></i> 10 min read</span>
+            </div>
+            <h2 class="blog-card-title">My Journey into Machine Learning as a Web Developer</h2>
+            <p class="blog-card-excerpt">How I transitioned from full-stack development to machine learning. Lessons
+              learned, resources used, and my first ML project - a diabetes prediction model.</p>
+            <div class="blog-tags">
+              <span>Python</span>
+              <span>Scikit-learn</span>
+              <span>ML</span>
+            </div>
+            <a href="#" class="blog-read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Blog Post 4 -->
+        <div class="blog-card-large">
+          <div class="blog-card-img">
+            <img src="https://placehold.co/800x500/1E293B/F59E0B?text=Portfolio+Guide" alt="Portfolio Guide">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta">
+              <span class="blog-date"><i class="far fa-calendar"></i> February 20, 2026</span>
+              <span class="blog-category"><i class="far fa-folder"></i> Career</span>
+              <span class="blog-read-time"><i class="far fa-clock"></i> 7 min read</span>
+            </div>
+            <h2 class="blog-card-title">How to Build a FAANG-Level Developer Portfolio in 2026</h2>
+            <p class="blog-card-excerpt">A comprehensive guide to creating a portfolio that stands out to top tech
+              companies. Tips on design, projects, and showcasing your skills effectively.</p>
+            <div class="blog-tags">
+              <span>Career</span>
+              <span>Portfolio</span>
+              <span>FAANG</span>
+            </div>
+            <a href="#" class="blog-read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Blog Post 5 -->
+        <div class="blog-card-large">
+          <div class="blog-card-img">
+            <img src="https://placehold.co/800x500/1E293B/EF4444?text=Git+Guide" alt="Git Guide">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta">
+              <span class="blog-date"><i class="far fa-calendar"></i> February 15, 2026</span>
+              <span class="blog-category"><i class="far fa-folder"></i> Tools</span>
+              <span class="blog-read-time"><i class="far fa-clock"></i> 6 min read</span>
+            </div>
+            <h2 class="blog-card-title">Git Commands Every Developer Should Know</h2>
+            <p class="blog-card-excerpt">Master essential Git commands for version control. From basic commits to
+              branching, merging, and resolving conflicts like a pro.</p>
+            <div class="blog-tags">
+              <span>Git</span>
+              <span>GitHub</span>
+              <span>Version Control</span>
+            </div>
+            <a href="#" class="blog-read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Blog Post 6 -->
+        <div class="blog-card-large">
+          <div class="blog-card-img">
+            <img src="https://placehold.co/800x500/1E293B/3B82F6?text=Node.js+Best+Practices"
+              alt="Node.js Best Practices">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta">
+              <span class="blog-date"><i class="far fa-calendar"></i> February 8, 2026</span>
+              <span class="blog-category"><i class="far fa-folder"></i> Backend</span>
+              <span class="blog-read-time"><i class="far fa-clock"></i> 9 min read</span>
+            </div>
+            <h2 class="blog-card-title">Node.js Best Practices for Production Applications</h2>
+            <p class="blog-card-excerpt">Learn how to structure Node.js applications for scalability, security, and
+              maintainability. Error handling, logging, and performance optimization tips.</p>
+            <div class="blog-tags">
+              <span>Node.js</span>
+              <span>Express</span>
+              <span>Backend</span>
+            </div>
+            <a href="#" class="blog-read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Blog Post 7 -->
+        <div class="blog-card-large">
+          <div class="blog-card-img">
+            <img src="https://placehold.co/800x500/1E293B/22C55E?text=CSS+Grid" alt="CSS Grid">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta">
+              <span class="blog-date"><i class="far fa-calendar"></i> February 1, 2026</span>
+              <span class="blog-category"><i class="far fa-folder"></i> CSS</span>
+              <span class="blog-read-time"><i class="far fa-clock"></i> 5 min read</span>
+            </div>
+            <h2 class="blog-card-title">Mastering CSS Grid: A Complete Guide with Examples</h2>
+            <p class="blog-card-excerpt">Everything you need to know about CSS Grid layout. Learn grid concepts,
+              properties, and build responsive layouts with real-world examples.</p>
+            <div class="blog-tags">
+              <span>CSS</span>
+              <span>Grid</span>
+              <span>Responsive</span>
+            </div>
+            <a href="#" class="blog-read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+
+        <!-- Blog Post 8 -->
+        <div class="blog-card-large">
+          <div class="blog-card-img">
+            <img src="https://placehold.co/800x500/1E293B/8B5CF6?text=Interview+Prep" alt="Interview Prep">
+          </div>
+          <div class="blog-card-content">
+            <div class="blog-meta">
+              <span class="blog-date"><i class="far fa-calendar"></i> January 25, 2026</span>
+              <span class="blog-category"><i class="far fa-folder"></i> Career</span>
+              <span class="blog-read-time"><i class="far fa-clock"></i> 8 min read</span>
+            </div>
+            <h2 class="blog-card-title">How I Prepared for FAANG Interviews: Resources and Strategy</h2>
+            <p class="blog-card-excerpt">My personal journey preparing for technical interviews at top companies. Study
+              plan, resources, practice strategies, and tips for success.</p>
+            <div class="blog-tags">
+              <span>Interviews</span>
+              <span>DSA</span>
+              <span>Career</span>
+            </div>
+            <a href="#" class="blog-read-more">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pagination -->
+      <div class="pagination">
+        <a href="#" class="page-link active">1</a>
+        <a href="#" class="page-link">2</a>
+        <a href="#" class="page-link">3</a>
+        <a href="#" class="page-link">4</a>
+        <a href="#" class="page-link">5</a>
+        <a href="#" class="page-link next"><i class="fas fa-chevron-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="newsletter">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Subscribe to My Newsletter</h2>
+        <p>Get the latest posts, tutorials, and resources delivered to your inbox.</p>
+        <form class="newsletter-form">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">Mubasshir Ali</div>
+        <p class="footer-text">Building technology that solves real-world problems</p>
+
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+
+        <div class="footer-links">
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="projects.html">Projects</a>
+          <a href="skills.html">Skills</a>
+          <a href="blog.html">Blog</a>
+          <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="footer-copyright">
+          <p>&copy; 2026 Mubasshir Ali. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

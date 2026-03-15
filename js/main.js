@@ -187,3 +187,21 @@ document.querySelectorAll('section, .skill-item, .project-card, .achievement-car
 document.querySelectorAll('.skill-item .progress-fill').forEach(fill => {
   fill.style.width = '0';
 });
+
+// ===== ACTIVE PAGE HIGHLIGHTING =====
+document.addEventListener('DOMContentLoaded', function () {
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  const navLinks = document.querySelectorAll('.nav-menu a, .nav-menu-mobile a');
+
+  navLinks.forEach(link => {
+    const linkPage = link.getAttribute('href');
+    if (linkPage === currentPage) {
+      link.classList.add('active');
+    }
+
+    // Special case for index.html
+    if (currentPage === 'index.html' && (linkPage === 'index.html' || linkPage === '#')) {
+      link.classList.add('active');
+    }
+  });
+});
