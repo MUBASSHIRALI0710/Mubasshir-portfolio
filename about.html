@@ -4,6 +4,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Mubasshir Ali - Full Stack Developer Portfolio">
+  <meta name="description"
+    content="Full Stack Developer specializing in Java, JavaScript, Node.js. Building scalable web applications and AI-powered tools.">
+  <meta name="keywords"
+    content="Full Stack Developer, Java, JavaScript, Node.js, React, Portfolio, Web Developer, Mubasshir Ali">
+  <meta name="author" content="Mubasshir Ali">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mubasshirali.me/">
+  <meta property="og:title" content="Mubasshir Ali - Full Stack Developer">
+  <meta property="og:description" content="Full Stack Developer specializing in Java, JavaScript, Node.js">
+  <meta property="og:image" content="https://mubasshirali.me/assets/images/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://mubasshirali.me/">
+  <meta property="twitter:title" content="Mubasshir Ali - Full Stack Developer">
+  <meta property="twitter:description" content="Full Stack Developer specializing in Java, JavaScript, Node.js">
+  <meta property="twitter:image" content="https://mubasshirali.me/assets/images/og-image.jpg">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://mubasshirali.me/">
+
+  <!-- Favicon - Add to all pages -->
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
   <title>About Me - Mubasshir Ali | Full Stack Developer</title>
   <!-- Google Fonts -->
   <link
@@ -11,9 +41,12 @@
     rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- AOS Animation CSS - Add after other CSS links -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pages.css">
+  <script src="js/theme.js" defer></script>
   <style>
     /* Additional responsive fixes for about page */
     @media (max-width: 768px) {
@@ -319,7 +352,10 @@
           </div>
 
           <div class="about-buttons">
-            <a href="assets/resume.pdf" class="btn btn-primary" download>Download Resume</a>
+            <!-- Download button mein onclick attribute add karo -->
+            <a href="assets/resume.pdf" class="btn btn-primary" download onclick="return countDownload();">
+              <i class="fas fa-download"></i> Download Resume
+            </a>
             <a href="contact.html" class="btn btn-outline">Hire Me</a>
           </div>
         </div>
@@ -436,8 +472,23 @@
       </div>
     </div>
   </footer>
-
+  <!-- Back to Top Button - Add before scripts -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
   <script src="js/main.js"></script>
+  <!-- AOS Animation JS - Add before closing body tag -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false,
+      offset: 100
+    });
+  </script>
+
 </body>
 
 </html>

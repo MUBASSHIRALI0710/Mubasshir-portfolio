@@ -205,3 +205,51 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+// Typed.js Effect
+if (document.querySelector('.typed-text')) {
+  new Typed('.typed-text', {
+    strings: [
+      'Full Stack Developer',
+      'JavaScript Expert',
+      'Java Developer',
+      'ML Enthusiast',
+      'Problem Solver'
+    ],
+    typeSpeed: 50,
+    backSpeed: 30,
+    backDelay: 2000,
+    loop: true,
+    showCursor: true,
+    cursorChar: '|'
+  });
+}
+
+// Resume download counter
+window.countDownload = function () {
+  let count = localStorage.getItem('resumeDownloads') || 0;
+  count = parseInt(count) + 1;
+  localStorage.setItem('resumeDownloads', count);
+  console.log(`Resume downloaded ${count} times`);
+  return true;
+}
+
+// Back to Top Button
+const backToTop = document.getElementById('back-to-top');
+
+if (backToTop) {
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+      backToTop.classList.add('show');
+    } else {
+      backToTop.classList.remove('show');
+    }
+  });
+
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+}

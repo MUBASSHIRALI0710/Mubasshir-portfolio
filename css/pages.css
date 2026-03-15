@@ -394,7 +394,7 @@
   font-weight: bold;
 }
 
-/* GitHub Stats Section */
+/* GitHub Stats Styles */
 .github-stats {
   padding: 5rem 0;
   background: linear-gradient(
@@ -417,7 +417,7 @@
   padding: 1.5rem;
   border: 1px solid var(--glass-border);
   text-align: center;
-  transition: var(--transition);
+  transition: all 0.3s ease;
 }
 
 .github-card:hover {
@@ -1452,5 +1452,83 @@
   .page-header {
     background: none;
     color: black;
+  }
+}
+/* Filter Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.filter-btn {
+  padding: 0.7rem 1.8rem;
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  color: var(--text-light);
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.3);
+}
+
+/* Form Error Styles */
+.form-group input.error,
+.form-group textarea.error {
+  border-color: #ef4444 !important;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Loading Spinner */
+.fa-spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

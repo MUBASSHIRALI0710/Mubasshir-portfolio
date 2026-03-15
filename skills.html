@@ -9,11 +9,14 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
     rel="stylesheet">
+  <!-- AOS Animation CSS - Add after other CSS links -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pages.css">
+  <script src="js/theme.js" defer></script>
 </head>
 
 <body>
@@ -509,8 +512,22 @@
       </div>
     </div>
   </footer>
-
+  <!-- Back to Top Button - Add before scripts -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
   <script src="js/main.js"></script>
+  <!-- AOS Animation JS - Add before closing body tag -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false,
+      offset: 100
+    });
+  </script>
 </body>
 
 </html>

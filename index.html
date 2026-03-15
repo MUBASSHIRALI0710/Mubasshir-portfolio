@@ -9,10 +9,13 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
     rel="stylesheet">
+  <!-- AOS Animation CSS - Add after other CSS links -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/theme.js" defer></script>
 </head>
 
 <body>
@@ -23,11 +26,11 @@
 
       <!-- Desktop Menu -->
       <ul class="nav-menu">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
 
       <div class="nav-right">
@@ -42,11 +45,11 @@
 
     <!-- Mobile Menu -->
     <ul class="nav-menu-mobile">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 
@@ -54,6 +57,13 @@
   <section class="hero" id="home">
     <!-- Your existing hero code -->
     <div class="hero-container">
+
+      <div class="hero-image">
+        <div class="profile-pic-wrapper">
+          <div class="orbiting-dots"></div>
+          <img src="assets/images/profile-placeholder.jpg" alt="Mubasshir Ali" class="profile-pic">
+        </div>
+      </div>
       <div class="hero-content">
         <h1 class="hero-title">
           Hi, I'm <span class="highlight">Mubasshir Ali</span>
@@ -65,17 +75,15 @@
           My goal is to create technology that solves real-world problems.
         </p>
         <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="assets/resume.pdf" class="btn btn-secondary" download>Download Resume</a>
-          <a href="#contact" class="btn btn-outline">Contact Me</a>
+          <a href="projects.html" class="btn btn-primary">View Projects</a>
+          <!-- Download button mein onclick attribute add karo -->
+          <a href="assets/resume.pdf" class="btn btn-primary" download onclick="return countDownload();">
+            <i class="fas fa-download"></i> Download Resume
+          </a>
+          <a href="contact.html" class="btn btn-outline">Contact Me</a>
         </div>
       </div>
-      <div class="hero-image">
-        <div class="profile-pic-wrapper">
-          <div class="orbiting-dots"></div>
-          <img src="assets/images/profile-placeholder.jpg" alt="Mubasshir Ali" class="profile-pic">
-        </div>
-      </div>
+
     </div>
   </section>
 
@@ -602,8 +610,22 @@
       </div>
     </div>
   </footer>
-
+  <!-- Back to Top Button - Add before scripts -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
   <script src="js/main.js"></script>
+  <!-- AOS Animation JS - Add before closing body tag -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false,
+      offset: 100
+    });
+  </script>
 </body>
 
 </html>

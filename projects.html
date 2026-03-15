@@ -8,9 +8,14 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
     rel="stylesheet">
+  <!-- AOS Animation CSS - Add after other CSS links -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/pages.css">
+  <script src="js/theme.js" defer></script>
 </head>
 
 <body>
@@ -59,10 +64,11 @@
   <section class="project-filter-section">
     <div class="container">
       <div class="filter-buttons">
-        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn active" data-filter="all">All Projects</button>
         <button class="filter-btn" data-filter="javascript">JavaScript</button>
         <button class="filter-btn" data-filter="python">Python</button>
-        <button class="filter-btn" data-filter="mern">MERN</button>
+        <button class="filter-btn" data-filter="react">React</button>
+        <button class="filter-btn" data-filter="node">Node.js</button>
         <button class="filter-btn" data-filter="ml">Machine Learning</button>
       </div>
     </div>
@@ -264,8 +270,9 @@
     </div>
   </section>
 
-  <!-- GitHub Stats Section -->
-  <section class="github-stats">
+
+  <!-- GitHub Stats Section - Add after projects grid -->
+  <section class="github-stats" data-aos="fade-up">
     <div class="container">
       <div class="section-header">
         <h2 class="section-title">GitHub <span class="highlight">Stats</span></h2>
@@ -273,17 +280,17 @@
       </div>
 
       <div class="github-grid">
-        <div class="github-card">
+        <div class="github-card" data-aos="zoom-in">
           <img
             src="https://github-readme-stats.vercel.app/api?username=MUBASSHIRALI0710&show_icons=true&theme=dark&hide_border=true&bg_color=0F172A&title_color=3B82F6&icon_color=22C55E"
             alt="GitHub Stats">
         </div>
-        <div class="github-card">
+        <div class="github-card" data-aos="zoom-in" data-aos-delay="200">
           <img
             src="https://github-readme-streak-stats.herokuapp.com/?user=MUBASSHIRALI0710&theme=dark&hide_border=true&background=0F172A&stroke=3B82F6&ring=22C55E&fire=22C55E&currStreakNum=FFFFFF"
             alt="GitHub Streak">
         </div>
-        <div class="github-card">
+        <div class="github-card" data-aos="zoom-in" data-aos-delay="400">
           <img
             src="https://github-readme-stats.vercel.app/api/top-langs/?username=MUBASSHIRALI0710&layout=compact&theme=dark&hide_border=true&bg_color=0F172A&title_color=3B82F6"
             alt="Top Languages">
@@ -291,11 +298,16 @@
       </div>
     </div>
   </section>
+  </section>
 
   <!-- Footer (same as before) -->
   <footer class="footer">
     <!-- copy footer from about.html -->
   </footer>
+  <!-- Back to Top Button - Add before scripts -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <script src="js/main.js"></script>
   <script>
@@ -327,6 +339,27 @@
           });
         });
       });
+    });
+  </script>
+  <!-- AOS Animation JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+  </script>
+  <!-- AOS Animation JS - Add before closing body tag -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false,
+      offset: 100
     });
   </script>
 </body>
