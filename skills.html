@@ -9,7 +9,7 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700&display=swap"
     rel="stylesheet">
-  <!-- AOS Animation CSS - Add after other CSS links -->
+  <!-- AOS Animation CSS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -79,6 +79,7 @@
   <!-- Detailed Skills Section -->
   <section class="skills-page">
     <div class="container">
+      
       <!-- Frontend Skills -->
       <div class="skill-category-large">
         <div class="category-header">
@@ -87,396 +88,387 @@
         </div>
         <p class="category-desc">Building responsive, interactive user interfaces with modern web technologies.</p>
 
-        <!-- Skill 1: HTML5 -->
-        <div class="skill-detailed-card">
-          <div class="skill-icon">
-            <i class="fab fa-html5" style="color: #E34F26;"></i>
-          </div>
-          <div class="skill-info">
-            <h3>HTML5</h3>
-            <div class="skill-progress">
-              <div class="progress-header">
-                <span class="skill-level">Expert</span>
-                <span class="skill-percentage">95%</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 95%"></div>
-              </div>
+        <div class="skills-detailed">
+          <!-- Skill 1: HTML5 -->
+          <div class="skill-detailed-card" data-aos="fade-up">
+            <div class="skill-icon">
+              <i class="fab fa-html5" style="color: #E34F26;"></i>
             </div>
-            <p class="skill-description">Semantic HTML, accessibility (WCAG), SEO optimization, canvas, SVG animations.
-            </p>
-          </div>
-        </div>
-
-        <!-- Skill 2: CSS3 -->
-        <div class="skill-detailed-card">
-          <div class="skill-icon">
-            <i class="fab fa-css3-alt" style="color: #1572B6;"></i>
-          </div>
-          <div class="skill-info">
-            <h3>CSS3</h3>
-            <div class="skill-progress">
-              <div class="progress-header">
-                <span class="skill-level">Expert</span>
-                <span class="skill-percentage">90%</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 90%"></div>
-              </div>
-            </div>
-            <p class="skill-description">Flexbox, Grid, animations, transitions, responsive design, CSS variables,
-              Tailwind CSS.</p>
-          </div>
-        </div>
-
-        <!-- Skill 3: JavaScript -->
-        <div class="skill-detailed-card">
-          <div class="skill-icon">
-            <i class="fab fa-js" style="color: #F7DF1E;"></i>
-          </div>
-          <div class="skill-info">
-            <h3>JavaScript</h3>
-            <div class="skill-progress">
-              <div class="progress-header">
-                <span class="skill-level">Advanced</span>
-                <span class="skill-percentage">85%</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 85%"></div>
-              </div>
-            </div>
-            <p class="skill-description">ES6+, async/await, promises, DOM manipulation, fetch API, modules, error
-              handling.</p>
-          </div>
-        </div>
-
-        <!-- Skill 4: React -->
-        <div class="skill-detailed-card">
-          <div class="skill-icon">
-            <i class="fab fa-react" style="color: #61DAFB;"></i>
-          </div>
-          <div class="skill-info">
-            <h3>React</h3>
-            <div class="skill-progress">
-              <div class="progress-header">
-                <span class="skill-level">Intermediate</span>
-                <span class="skill-percentage">75%</span>
-              </div>
-              <div class="progress-bar">
-                <div class="progress-fill" style="width: 75%"></div>
-              </div>
-            </div>
-            <p class="skill-description">Hooks, context API, routing, state management, functional components, props.
-            </p>
-          </div>
-        </div>
-
-        <!-- Backend Skills -->
-        <div class="skill-category-large">
-          <div class="category-header">
-            <i class="fas fa-server"></i>
-            <h2>Backend Development</h2>
-          </div>
-          <p class="category-desc">Creating robust server-side applications and RESTful APIs.</p>
-
-          <div class="skills-detailed">
-            <!-- Skill 5: Node.js -->
-            <div class="skill-detailed-card">
-              <div class="skill-icon">
-                <i class="fab fa-node" style="color: #339933;"></i>
-              </div>
-              <div class="skill-info">
-                <h3>Node.js</h3>
-                <div class="skill-progress">
-                  <div class="progress-header">
-                    <span class="skill-level">Advanced</span>
-                    <span class="skill-percentage">85%</span>
-                  </div>
-                  <div class="progress-bar">
-                    <div class="progress-fill" style="width: 85%"></div>
-                  </div>
+            <div class="skill-info">
+              <h3>HTML5</h3>
+              <div class="skill-progress">
+                <div class="progress-header">
+                  <span class="skill-level">Expert</span>
+                  <span class="skill-percentage">95%</span>
                 </div>
-                <p class="skill-description">Express.js, REST APIs, middleware, file system, authentication, JWT, error
-                  handling.</p>
-              </div>
-            </div>
-            <!-- Skill: C++ -->
-            <div class="skill-detailed-card">
-              <div class="skill-icon"
-                style="font-family: monospace; font-weight: bold; font-size: 1.8rem; color: #00599C;">
-                C++
-              </div>
-              <div class="skill-info">
-                <h3>C++</h3>
-                <div class="skill-progress">
-                  <div class="progress-header">
-                    <span class="skill-level">Intermediate</span>
-                    <span class="skill-percentage">75%</span>
-                  </div>
-                  <div class="progress-bar">
-                    <div class="progress-fill" style="width: 75%"></div>
-                  </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 95%"></div>
                 </div>
-                <p class="skill-description">Object-Oriented Programming, STL, Data Structures, Algorithms, Memory
-                  Management, File Handling.</p>
               </div>
-            </div>
-            <!-- Skill 6: Java -->
-            <div class="skill-detailed-card">
-              <div class="skill-icon">
-                <i class="fab fa-java" style="color: #007396;"></i>
-              </div>
-              <div class="skill-info">
-                <h3>Java</h3>
-                <div class="skill-progress">
-                  <div class="progress-header">
-                    <span class="skill-level">Intermediate</span>
-                    <span class="skill-percentage">70%</span>
-                  </div>
-                  <div class="progress-bar">
-                    <div class="progress-fill" style="width: 70%"></div>
-                  </div>
-                </div>
-                <p class="skill-description">OOP, data structures, algorithms, Spring Boot basics, JDBC, multithreading.
-                </p>
-              </div>
-            </div>
-
-            <!-- Skill 7: Python -->
-            <div class="skill-detailed-card">
-              <div class="skill-icon">
-                <i class="fab fa-python" style="color: #3776AB;"></i>
-              </div>
-              <div class="skill-info">
-                <h3>Python</h3>
-                <div class="skill-progress">
-                  <div class="progress-header">
-                    <span class="skill-level">Intermediate</span>
-                    <span class="skill-percentage">75%</span>
-                  </div>
-                  <div class="progress-bar">
-                    <div class="progress-fill" style="width: 75%"></div>
-                  </div>
-                </div>
-                <p class="skill-description">Flask, Django basics, pandas, data analysis, scripting, automation.</p>
-              </div>
-            </div>
-
-            <!-- Skill 8: Databases -->
-            <div class="skill-detailed-card">
-              <div class="skill-icon">
-                <i class="fas fa-database" style="color: #47A248;"></i>
-              </div>
-              <div class="skill-info">
-                <h3>Databases</h3>
-                <div class="skill-progress">
-                  <div class="progress-header">
-                    <span class="skill-level">Advanced</span>
-                    <span class="skill-percentage">80%</span>
-                  </div>
-                  <div class="progress-bar">
-                    <div class="progress-fill" style="width: 80%"></div>
-                  </div>
-                </div>
-                <p class="skill-description">MongoDB, MySQL, PostgreSQL, database design, queries, indexing,
-                  aggregation.
-                </p>
-              </div>
+              <p class="skill-description">Semantic HTML, accessibility (WCAG), SEO optimization, canvas, SVG animations.</p>
             </div>
           </div>
-        </div>
 
-        <!-- Tools & Technologies -->
-        <div class="skill-category-large">
-          <div class="category-header">
-            <i class="fas fa-tools"></i>
-            <h2>Tools & Technologies</h2>
-          </div>
-          <p class="category-desc">Development tools and technologies I use daily.</p>
-
-          <div class="skills-detailed">
-            <!-- Skill 9: Git -->
-            <div class="skill-detailed-card">
-              <div class="skill-icon">
-                <i class="fab fa-git-alt" style="color: #F05032;"></i>
-              </div>
-              <div class="skill-info">
-                <h3>Git & GitHub</h3>
-                <div class="skill-progress">
-                  <div class="progress-header">
-                    <span class="skill-level">Expert</span>
-                    <span class="skill-percentage">90%</span>
-                  </div>
-                  <div class="progress-bar">
-                    <div class="progress-fill" style="width: 90%"></div>
-                  </div>
-                </div>
-                <p class="skill-description">Version control, branching, merging, pull requests, GitHub Actions,
-                  collaboration.</p>
-              </div>
+          <!-- Skill 2: CSS3 -->
+          <div class="skill-detailed-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-icon">
+              <i class="fab fa-css3-alt" style="color: #1572B6;"></i>
             </div>
-
-            <!-- Skill 10: VS Code -->
-            <div class="skill-detailed-card">
-              <div class="skill-icon">
-                <i class="fas fa-code" style="color: #007ACC;"></i>
-              </div>
-              <div class="skill-info">
-                <h3>VS Code</h3>
-                <div class="skill-progress">
-                  <div class="progress-header">
-                    <span class="skill-level">Expert</span>
-                    <span class="skill-percentage">95%</span>
-                  </div>
-                  <div class="progress-bar">
-                    <div class="progress-fill" style="width: 95%"></div>
-                  </div>
+            <div class="skill-info">
+              <h3>CSS3</h3>
+              <div class="skill-progress">
+                <div class="progress-header">
+                  <span class="skill-level">Expert</span>
+                  <span class="skill-percentage">90%</span>
                 </div>
-                <p class="skill-description">Extensions, debugging, shortcuts, customization, integrated terminal, live
-                  share.</p>
-              </div>
-            </div>
-
-            <!-- Skill 11: Postman -->
-            <div class="skill-detailed-card">
-              <div class="skill-icon">
-                <i class="fas fa-network-wired" style="color: #FF6C37;"></i>
-              </div>
-              <div class="skill-info">
-                <h3>Postman</h3>
-                <div class="skill-progress">
-                  <div class="progress-header">
-                    <span class="skill-level">Advanced</span>
-                    <span class="skill-percentage">80%</span>
-                  </div>
-                  <div class="progress-bar">
-                    <div class="progress-fill" style="width: 80%"></div>
-                  </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 90%"></div>
                 </div>
-                <p class="skill-description">API testing, collections, environments, automation, documentation, testing
-                  scripts.</p>
               </div>
-            </div>
-
-            <!-- Skill 12: Docker -->
-            <div class="skill-detailed-card">
-              <div class="skill-icon">
-                <i class="fab fa-docker" style="color: #2496ED;"></i>
-              </div>
-              <div class="skill-info">
-                <h3>Docker</h3>
-                <div class="skill-progress">
-                  <div class="progress-header">
-                    <span class="skill-level">Beginner</span>
-                    <span class="skill-percentage">40%</span>
-                  </div>
-                  <div class="progress-bar">
-                    <div class="progress-fill" style="width: 40%"></div>
-                  </div>
-                </div>
-                <p class="skill-description">Containerization, Dockerfiles, docker-compose, basic commands, image
-                  management.</p>
-              </div>
+              <p class="skill-description">Flexbox, Grid, animations, transitions, responsive design, CSS variables, Tailwind CSS.</p>
             </div>
           </div>
-        </div>
 
-        <!-- Learning & Future Skills -->
-        <div class="skill-category-large">
-          <div class="category-header">
-            <i class="fas fa-book-open"></i>
-            <h2>Currently Learning</h2>
+          <!-- Skill 3: JavaScript -->
+          <div class="skill-detailed-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-icon">
+              <i class="fab fa-js" style="color: #F7DF1E;"></i>
+            </div>
+            <div class="skill-info">
+              <h3>JavaScript</h3>
+              <div class="skill-progress">
+                <div class="progress-header">
+                  <span class="skill-level">Advanced</span>
+                  <span class="skill-percentage">85%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 85%"></div>
+                </div>
+              </div>
+              <p class="skill-description">ES6+, async/await, promises, DOM manipulation, fetch API, modules, error handling.</p>
+            </div>
           </div>
-          <p class="category-desc">Technologies I'm actively learning and improving.</p>
 
-          <div class="skills-detailed">
-            <!-- Skill 13: ML -->
-            <div class="skill-detailed-card">
-              <div class="skill-icon">
-                <i class="fas fa-brain" style="color: #FF6B6B;"></i>
-              </div>
-              <div class="skill-info">
-                <h3>Machine Learning</h3>
-                <div class="skill-progress">
-                  <div class="progress-header">
-                    <span class="skill-level">Beginner</span>
-                    <span class="skill-percentage">35%</span>
-                  </div>
-                  <div class="progress-bar">
-                    <div class="progress-fill" style="width: 35%"></div>
-                  </div>
-                </div>
-                <p class="skill-description">Scikit-learn, pandas, numpy, data preprocessing, basic algorithms, model
-                  evaluation.</p>
-              </div>
+          <!-- Skill 4: React -->
+          <div class="skill-detailed-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-icon">
+              <i class="fab fa-react" style="color: #61DAFB;"></i>
             </div>
-
-            <!-- Skill 14: Cloud -->
-            <div class="skill-detailed-card">
-              <div class="skill-icon">
-                <i class="fas fa-cloud" style="color: #00A1E0;"></i>
-              </div>
-              <div class="skill-info">
-                <h3>Cloud Computing</h3>
-                <div class="skill-progress">
-                  <div class="progress-header">
-                    <span class="skill-level">Beginner</span>
-                    <span class="skill-percentage">30%</span>
-                  </div>
-                  <div class="progress-bar">
-                    <div class="progress-fill" style="width: 30%"></div>
-                  </div>
+            <div class="skill-info">
+              <h3>React</h3>
+              <div class="skill-progress">
+                <div class="progress-header">
+                  <span class="skill-level">Intermediate</span>
+                  <span class="skill-percentage">75%</span>
                 </div>
-                <p class="skill-description">AWS basics, EC2, S3, deployment, Vercel, Netlify, cloud concepts.</p>
-              </div>
-            </div>
-
-            <!-- Skill 15: TypeScript -->
-            <div class="skill-detailed-card">
-              <div class="skill-icon">
-                <i class="fab fa-js" style="color: #3178C6;"></i>
-              </div>
-              <div class="skill-info">
-                <h3>TypeScript</h3>
-                <div class="skill-progress">
-                  <div class="progress-header">
-                    <span class="skill-level">Intermediate</span>
-                    <span class="skill-percentage">50%</span>
-                  </div>
-                  <div class="progress-bar">
-                    <div class="progress-fill" style="width: 50%"></div>
-                  </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 75%"></div>
                 </div>
-                <p class="skill-description">Types, interfaces, generics, enums, type safety, React with TypeScript.</p>
               </div>
+              <p class="skill-description">Hooks, context API, routing, state management, functional components, props.</p>
             </div>
           </div>
         </div>
       </div>
+
+      <!-- Backend Skills -->
+      <div class="skill-category-large">
+        <div class="category-header">
+          <i class="fas fa-server"></i>
+          <h2>Backend Development</h2>
+        </div>
+        <p class="category-desc">Creating robust server-side applications and RESTful APIs.</p>
+
+        <div class="skills-detailed">
+          <!-- Skill 5: Node.js -->
+          <div class="skill-detailed-card" data-aos="fade-up">
+            <div class="skill-icon">
+              <i class="fab fa-node" style="color: #339933;"></i>
+            </div>
+            <div class="skill-info">
+              <h3>Node.js</h3>
+              <div class="skill-progress">
+                <div class="progress-header">
+                  <span class="skill-level">Advanced</span>
+                  <span class="skill-percentage">85%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 85%"></div>
+                </div>
+              </div>
+              <p class="skill-description">Express.js, REST APIs, middleware, file system, authentication, JWT, error handling.</p>
+            </div>
+          </div>
+          
+          <!-- Skill: C++ -->
+          <div class="skill-detailed-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-icon" style="font-family: monospace; font-weight: bold; font-size: 1.8rem; color: #00599C;">
+              C++
+            </div>
+            <div class="skill-info">
+              <h3>C++</h3>
+              <div class="skill-progress">
+                <div class="progress-header">
+                  <span class="skill-level">Intermediate</span>
+                  <span class="skill-percentage">75%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 75%"></div>
+                </div>
+              </div>
+              <p class="skill-description">Object-Oriented Programming, STL, Data Structures, Algorithms, Memory Management, File Handling.</p>
+            </div>
+          </div>
+          
+          <!-- Skill 6: Java -->
+          <div class="skill-detailed-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-icon">
+              <i class="fab fa-java" style="color: #007396;"></i>
+            </div>
+            <div class="skill-info">
+              <h3>Java</h3>
+              <div class="skill-progress">
+                <div class="progress-header">
+                  <span class="skill-level">Intermediate</span>
+                  <span class="skill-percentage">70%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 70%"></div>
+                </div>
+              </div>
+              <p class="skill-description">OOP, data structures, algorithms, Spring Boot basics, JDBC, multithreading.</p>
+            </div>
+          </div>
+
+          <!-- Skill 7: Python -->
+          <div class="skill-detailed-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-icon">
+              <i class="fab fa-python" style="color: #3776AB;"></i>
+            </div>
+            <div class="skill-info">
+              <h3>Python</h3>
+              <div class="skill-progress">
+                <div class="progress-header">
+                  <span class="skill-level">Intermediate</span>
+                  <span class="skill-percentage">75%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 75%"></div>
+                </div>
+              </div>
+              <p class="skill-description">Flask, Django basics, pandas, data analysis, scripting, automation.</p>
+            </div>
+          </div>
+
+          <!-- Skill 8: Databases -->
+          <div class="skill-detailed-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="skill-icon">
+              <i class="fas fa-database" style="color: #47A248;"></i>
+            </div>
+            <div class="skill-info">
+              <h3>Databases</h3>
+              <div class="skill-progress">
+                <div class="progress-header">
+                  <span class="skill-level">Advanced</span>
+                  <span class="skill-percentage">80%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 80%"></div>
+                </div>
+              </div>
+              <p class="skill-description">MongoDB, MySQL, PostgreSQL, database design, queries, indexing, aggregation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tools & Technologies -->
+      <div class="skill-category-large">
+        <div class="category-header">
+          <i class="fas fa-tools"></i>
+          <h2>Tools & Technologies</h2>
+        </div>
+        <p class="category-desc">Development tools and technologies I use daily.</p>
+
+        <div class="skills-detailed">
+          <!-- Skill 9: Git -->
+          <div class="skill-detailed-card" data-aos="fade-up">
+            <div class="skill-icon">
+              <i class="fab fa-git-alt" style="color: #F05032;"></i>
+            </div>
+            <div class="skill-info">
+              <h3>Git & GitHub</h3>
+              <div class="skill-progress">
+                <div class="progress-header">
+                  <span class="skill-level">Expert</span>
+                  <span class="skill-percentage">90%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 90%"></div>
+                </div>
+              </div>
+              <p class="skill-description">Version control, branching, merging, pull requests, GitHub Actions, collaboration.</p>
+            </div>
+          </div>
+
+          <!-- Skill 10: VS Code -->
+          <div class="skill-detailed-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-icon">
+              <i class="fas fa-code" style="color: #007ACC;"></i>
+            </div>
+            <div class="skill-info">
+              <h3>VS Code</h3>
+              <div class="skill-progress">
+                <div class="progress-header">
+                  <span class="skill-level">Expert</span>
+                  <span class="skill-percentage">95%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 95%"></div>
+                </div>
+              </div>
+              <p class="skill-description">Extensions, debugging, shortcuts, customization, integrated terminal, live share.</p>
+            </div>
+          </div>
+
+          <!-- Skill 11: Postman -->
+          <div class="skill-detailed-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-icon">
+              <i class="fas fa-network-wired" style="color: #FF6C37;"></i>
+            </div>
+            <div class="skill-info">
+              <h3>Postman</h3>
+              <div class="skill-progress">
+                <div class="progress-header">
+                  <span class="skill-level">Advanced</span>
+                  <span class="skill-percentage">80%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 80%"></div>
+                </div>
+              </div>
+              <p class="skill-description">API testing, collections, environments, automation, documentation, testing scripts.</p>
+            </div>
+          </div>
+
+          <!-- Skill 12: Docker -->
+          <div class="skill-detailed-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="skill-icon">
+              <i class="fab fa-docker" style="color: #2496ED;"></i>
+            </div>
+            <div class="skill-info">
+              <h3>Docker</h3>
+              <div class="skill-progress">
+                <div class="progress-header">
+                  <span class="skill-level">Beginner</span>
+                  <span class="skill-percentage">40%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 40%"></div>
+                </div>
+              </div>
+              <p class="skill-description">Containerization, Dockerfiles, docker-compose, basic commands, image management.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Learning & Future Skills -->
+      <div class="skill-category-large">
+        <div class="category-header">
+          <i class="fas fa-book-open"></i>
+          <h2>Currently Learning</h2>
+        </div>
+        <p class="category-desc">Technologies I'm actively learning and improving.</p>
+
+        <div class="skills-detailed">
+          <!-- Skill 13: ML -->
+          <div class="skill-detailed-card" data-aos="fade-up">
+            <div class="skill-icon">
+              <i class="fas fa-brain" style="color: #FF6B6B;"></i>
+            </div>
+            <div class="skill-info">
+              <h3>Machine Learning</h3>
+              <div class="skill-progress">
+                <div class="progress-header">
+                  <span class="skill-level">Beginner</span>
+                  <span class="skill-percentage">35%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 35%"></div>
+                </div>
+              </div>
+              <p class="skill-description">Scikit-learn, pandas, numpy, data preprocessing, basic algorithms, model evaluation.</p>
+            </div>
+          </div>
+
+          <!-- Skill 14: Cloud -->
+          <div class="skill-detailed-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="skill-icon">
+              <i class="fas fa-cloud" style="color: #00A1E0;"></i>
+            </div>
+            <div class="skill-info">
+              <h3>Cloud Computing</h3>
+              <div class="skill-progress">
+                <div class="progress-header">
+                  <span class="skill-level">Beginner</span>
+                  <span class="skill-percentage">30%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 30%"></div>
+                </div>
+              </div>
+              <p class="skill-description">AWS basics, EC2, S3, deployment, Vercel, Netlify, cloud concepts.</p>
+            </div>
+          </div>
+
+          <!-- Skill 15: TypeScript -->
+          <div class="skill-detailed-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="skill-icon">
+              <i class="fab fa-js" style="color: #3178C6;"></i>
+            </div>
+            <div class="skill-info">
+              <h3>TypeScript</h3>
+              <div class="skill-progress">
+                <div class="progress-header">
+                  <span class="skill-level">Intermediate</span>
+                  <span class="skill-percentage">50%</span>
+                </div>
+                <div class="progress-bar">
+                  <div class="progress-fill" style="width: 50%"></div>
+                </div>
+              </div>
+              <p class="skill-description">Types, interfaces, generics, enums, type safety, React with TypeScript.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <!-- Skill Summary Cards -->
   <section class="skill-summary">
     <div class="container">
       <div class="summary-grid">
-        <div class="summary-card">
+        <div class="summary-card" data-aos="zoom-in">
           <i class="fas fa-clock"></i>
           <h3>3+ Years</h3>
           <p>Coding Experience</p>
         </div>
-        <div class="summary-card">
+        <div class="summary-card" data-aos="zoom-in" data-aos-delay="100">
           <i class="fas fa-code-branch"></i>
           <h3>50+</h3>
           <p>Projects Built</p>
         </div>
-        <div class="summary-card">
+        <div class="summary-card" data-aos="zoom-in" data-aos-delay="200">
           <i class="fas fa-mug-hot"></i>
           <h3>5000+</h3>
           <p>Cups of Coffee</p>
         </div>
-        <div class="summary-card">
+        <div class="summary-card" data-aos="zoom-in" data-aos-delay="300">
           <i class="fas fa-users"></i>
-          <h3>1M+</h3>
+          <h3>1k+</h3>
           <p>YouTube Community</p>
         </div>
       </div>
@@ -512,12 +504,15 @@
       </div>
     </div>
   </footer>
-  <!-- Back to Top Button - Add before scripts -->
+
+  <!-- Back to Top Button -->
   <button id="back-to-top" class="back-to-top" aria-label="Back to Top">
     <i class="fas fa-arrow-up"></i>
   </button>
+
   <script src="js/main.js"></script>
-  <!-- AOS Animation JS - Add before closing body tag -->
+  <script src="js/theme.js"></script>
+  <!-- AOS Animation JS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({
