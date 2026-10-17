@@ -13,7 +13,7 @@ export async function GET() {
       <pubDate>${new Date(post.isoDate).toUTCString()}</pubDate>
       <description><![CDATA[${post.description}]]></description>
       <author>${PERSONAL_INFO.email} (${PERSONAL_INFO.name})</author>
-      <category>${post.category}</category>
+      <category><![CDATA[${post.category}]]></category>
     </item>`;
   }).join('');
 
