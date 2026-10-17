@@ -1,0 +1,126 @@
+@import url('https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@500,600,700,800,900&f[]=clash-display@500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Dancing+Script:wght@600;700&family=Satisfy&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #FAFAF7;
+  --surface: #FFFFFF;
+  --surface-elevated: #F5F5F0;
+  --text-primary: #0A0A0A;
+  --text-secondary: #6B6B6B;
+  --text-muted: #8E8E8E;
+  --border: #E8E6E1;
+  --accent: #FF4D00;
+  --accent-hover: #E04400;
+  --accent-subtle: rgba(255, 77, 0, 0.08);
+  --ring-color: rgba(255, 77, 0, 0.35);
+}
+
+.dark {
+  --background: #0A0A0A;
+  --surface: #141414;
+  --surface-elevated: #1C1C1C;
+  --text-primary: #FAFAF7;
+  --text-secondary: #9A9A9A;
+  --text-muted: #707070;
+  --border: #262626;
+  --accent: #FF5A1A;
+  --accent-hover: #FF723B;
+  --accent-subtle: rgba(255, 90, 26, 0.12);
+  --ring-color: rgba(255, 90, 26, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+  border-color: var(--border);
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--background);
+  color: var(--text-primary);
+}
+
+body {
+  background-color: var(--background);
+  color: var(--text-primary);
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Selection */
+::selection {
+  background: var(--accent);
+  color: #FFFFFF;
+}
+
+/* Headings font */
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Cabinet Grotesk', 'Clash Display', 'Inter', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Subtle Hero Grid */
+.hero-grid {
+  background-size: 36px 36px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.04) 1px, transparent 1px);
+}
+
+.dark .hero-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.035) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+}
+
+/* Radial Glow behind Hero */
+.hero-glow {
+  background: radial-gradient(circle 500px at 50% 30%, rgba(255, 77, 0, 0.09), transparent 70%);
+}
+
+.dark .hero-glow {
+  background: radial-gradient(circle 500px at 50% 30%, rgba(255, 90, 26, 0.12), transparent 70%);
+}
+
+/* Focus styles */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
