@@ -19,6 +19,9 @@ import { LinkedinIcon, TwitterIcon } from '@/components/Icons';
 import { SITE_URL } from '@/data/portfolioData';
 
 export default function AdminPage() {
+  const [passcode, setPasscode] = useState('');
+  const [isAuthorized, setIsAuthorized] = useState(false);
+  const [authError, setAuthError] = useState(false);
   const [title, setTitle] = useState('');
   const [slug, setSlug] = useState('');
   const [description, setDescription] = useState('');
@@ -92,6 +95,61 @@ ${description || 'Description'}
 
 Full deep dive on my portfolio:
 ${SITE_URL}/blog/${slug || 'your-slug'}`;
+
+  const handleUnlock = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (passcode === '0710') {
+      setIsAuthorized(true);
+      setAuthError(false);
+    } else {
+      setAuthError(true);
+    }
+  };
+
+  if (!isAuthorized) {
+    return (
+      <div className="flex flex-col min-h-screen bg-background text-text-primary">
+        <Navigation />
+        <main className="flex-1 flex items-center justify-center px-4 pt-20">
+          <div className="w-full max-w-sm p-6 rounded-card bg-surface border border-border shadow-xl text-center space-y-4">
+            <div className="w-12 h-12 rounded-full bg-accent/10 text-accent flex items-center justify-center mx-auto">
+              <ShieldCheck className="w-6 h-6" />
+            </div>
+            <div>
+              <h2 className="text-lg font-heading font-bold text-text-primary">Owner Studio Access</h2>
+              <p className="text-xs font-mono text-text-secondary mt-1">
+                Enter your 4-digit passcode to access the publishing studio.
+              </p>
+            </div>
+            <form onSubmit={handleUnlock} className="space-y-3">
+              <input
+                type="password"
+                maxLength={6}
+                placeholder="Passcode"
+                value={passcode}
+                onChange={(e) => {
+                  setPasscode(e.target.value);
+                  setAuthError(false);
+                }}
+                className="w-full px-4 py-2.5 rounded-input bg-surface-elevated border border-border text-center text-sm font-mono tracking-widest focus:outline-none focus:border-accent"
+                autoFocus
+              />
+              {authError && (
+                <p className="text-xs text-red-500 font-mono">Incorrect passcode. Try again.</p>
+              )}
+              <button
+                type="submit"
+                className="w-full py-2.5 rounded-pill bg-accent text-white font-medium text-xs hover:bg-accent-hover transition-colors shadow-glow"
+              >
+                Unlock Studio
+              </button>
+            </form>
+          </div>
+        </main>
+        <Footer />
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-col min-h-screen bg-background text-text-primary">

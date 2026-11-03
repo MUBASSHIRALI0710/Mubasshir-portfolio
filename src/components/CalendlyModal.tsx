@@ -14,6 +14,7 @@ export function CalendlyModal({ isOpen, onClose }: CalendlyModalProps) {
   const [selectedSlot, setSelectedSlot] = useState('Tomorrow, 3:00 PM IST');
   const [guestEmail, setGuestEmail] = useState('');
   const [guestName, setGuestName] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [booked, setBooked] = useState(false);
 
   const availableSlots = [
@@ -24,10 +25,29 @@ export function CalendlyModal({ isOpen, onClose }: CalendlyModalProps) {
     'Thursday, 5:30 PM IST',
   ];
 
-  const handleBooking = (e: React.FormEvent) => {
+  const handleBooking = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!guestEmail) return;
-    setBooked(true);
+    setIsSubmitting(true);
+
+    try {
+      await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: guestName || 'Prospective Client',
+          email: guestEmail,
+          projectType: '15-Min Technical Discovery Call',
+          budget: 'Discovery Call',
+          message: `Requested Call Window: ${selectedSlot}\nGuest Name: ${guestName}\nGuest Email: ${guestEmail}`,
+        }),
+      });
+    } catch (err) {
+      console.error('Call booking notification error:', err);
+    } finally {
+      setIsSubmitting(false);
+      setBooked(true);
+    }
   };
 
   if (!isOpen) return null;
@@ -83,14 +103,24 @@ export function CalendlyModal({ isOpen, onClose }: CalendlyModalProps) {
                 Call Reserved!
               </h4>
               <p className="text-sm text-text-secondary max-w-xs mx-auto">
-                A calendar invitation for <span className="font-semibold text-text-primary">{selectedSlot}</span> has been scheduled for {guestEmail}.
+                Mubasshir has been notified. You will receive a Google Meet invite for <span className="font-semibold text-text-primary">{selectedSlot}</span> at <span className="font-mono text-accent">{guestEmail}</span>.
               </p>
-              <button
-                onClick={onClose}
-                className="mt-4 px-6 py-2 rounded-pill bg-accent text-white text-xs font-medium hover:bg-accent-hover transition-colors"
-              >
-                Close
-              </button>
+              <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-2">
+                <a
+                  href={`https://wa.me/917003151313?text=${encodeURIComponent(`Hi Mubasshir, I just reserved a 15-minute discovery call for ${selectedSlot}. My email is ${guestEmail}.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto px-4 py-2 rounded-pill bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-medium transition-colors flex items-center justify-center gap-1.5"
+                >
+                  <span>Quick WhatsApp Ping →</span>
+                </a>
+                <button
+                  onClick={onClose}
+                  className="w-full sm:w-auto px-5 py-2 rounded-pill bg-surface-elevated border border-border text-text-primary text-xs font-medium hover:bg-surface transition-colors"
+                >
+                  Done
+                </button>
+              </div>
             </div>
           ) : (
             <form onSubmit={handleBooking} className="mt-6 space-y-4">
@@ -148,10 +178,11 @@ export function CalendlyModal({ isOpen, onClose }: CalendlyModalProps) {
 
               <button
                 type="submit"
-                className="w-full mt-4 py-3 rounded-pill bg-accent text-white font-medium text-xs sm:text-sm hover:bg-accent-hover transition-colors shadow-glow flex items-center justify-center gap-2"
+                disabled={isSubmitting}
+                className="w-full mt-4 py-3 rounded-pill bg-accent text-white font-medium text-xs sm:text-sm hover:bg-accent-hover transition-colors shadow-glow flex items-center justify-center gap-2 disabled:opacity-50"
               >
                 <Video className="w-4 h-4" />
-                <span>Confirm Call with Mubasshir</span>
+                <span>{isSubmitting ? 'Reserving Call...' : 'Confirm Call with Mubasshir'}</span>
               </button>
             </form>
           )}

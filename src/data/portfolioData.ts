@@ -1,7 +1,7 @@
 import { Project, Service, Article, PinnedRepo } from '@/types';
 
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || 'https://mubasshirali0710.github.io/Mubasshir-portfolio';
+  process.env.NEXT_PUBLIC_SITE_URL || 'https://mubasshir-portfolio-henna.vercel.app';
 
 export const PERSONAL_INFO = {
   name: 'Mubasshir Ali',
@@ -69,23 +69,23 @@ export const GITHUB_PINNED_REPOS: PinnedRepo[] = [
   {
     name: 'NanoBrowser SaaS – AI Browser Automation Extension',
     repoUrl: 'https://github.com/MUBASSHIRALI0710',
-    demoUrl: '#work',
+    demoUrl: '/projects/nanobrowser-saas',
     description: 'Commercial subscription-based SaaS built on top of an open-source AI browser-automation tool. Planner/Navigator agent architecture (Amazon Nova Lite via AWS Bedrock) automating LinkedIn Easy Apply with Razorpay billing.',
     whatThisProves: 'Shipped a commercial subscription-based SaaS product with AWS Bedrock tool-calling, 3-tier Razorpay checkout, and webhook idempotency — production-ready.',
     stack: ['Node.js', 'TypeScript', 'Express.js', 'MongoDB', 'AWS Bedrock', 'Razorpay', 'Chrome Extension'],
   },
   {
     name: 'AI Refund Support Agent (Groq LLM Tool-Calling)',
-    repoUrl: 'https://github.com/MUBASSHIRALI0710',
-    demoUrl: '#work',
+    repoUrl: 'https://github.com/MUBASSHIRALI0710/ai-refund-support-agent',
+    demoUrl: 'https://github.com/MUBASSHIRALI0710/ai-refund-support-agent',
     description: 'Autonomous AI agent handling e-commerce refund requests end-to-end. Validates orders against 6 policy rules, auto-approving or flagging high-value ($500+) orders with real-time reasoning chain dashboard.',
     whatThisProves: 'Operated strictly through 7 tool-calling functions with backend verification preventing ineligible refunds even under adversarial input (7/7 test scenarios passed).',
     stack: ['Next.js 15', 'React 19', 'Node.js', 'Express.js', 'Groq LLM', 'Function Calling'],
   },
   {
     name: 'AttendPro – Smart Attendance Management System',
-    repoUrl: 'https://github.com/MUBASSHIRALI0710',
-    demoUrl: '#work',
+    repoUrl: 'https://github.com/MUBASSHIRALI0710/AttendPro---Smart-Attendance-Management-System',
+    demoUrl: 'https://attendpro-ruddy.vercel.app',
     description: 'Full-stack attendance management system with CRUD operations, date-wise tracking, search/filtering, duplicate roll-number validation, and analytics charts.',
     whatThisProves: 'Architected responsive full-stack dashboards with JWT authentication and MongoDB Atlas data models, deployed on Vercel and Render.',
     stack: ['React.js', 'Node.js', 'Express.js', 'MongoDB', 'JWT', 'Tailwind CSS'],
@@ -113,7 +113,7 @@ export const PROJECTS: Project[] = [
       { label: 'LLM Engine', value: 'Nova Lite' },
       { label: 'Subscription Flow', value: '3-Tier' },
     ],
-    demoUrl: 'https://github.com/MUBASSHIRALI0710',
+    demoUrl: '/projects/nanobrowser-saas',
     githubUrl: 'https://github.com/MUBASSHIRALI0710',
     featured: true,
     category: 'ai',
@@ -149,8 +149,8 @@ export const PROJECTS: Project[] = [
       { label: 'Policy Rules Checked', value: '6 Rules' },
       { label: 'High-Value Flagging', value: '$500+' },
     ],
-    demoUrl: 'https://github.com/MUBASSHIRALI0710',
-    githubUrl: 'https://github.com/MUBASSHIRALI0710',
+    demoUrl: 'https://github.com/MUBASSHIRALI0710/ai-refund-support-agent',
+    githubUrl: 'https://github.com/MUBASSHIRALI0710/ai-refund-support-agent',
     featured: true,
     category: 'ai',
     badge: 'LLM Agent',
@@ -185,8 +185,8 @@ export const PROJECTS: Project[] = [
       { label: 'Dashboard Tracking', value: 'Date-wise' },
       { label: 'Auth Security', value: 'JWT RBAC' },
     ],
-    demoUrl: 'https://github.com/MUBASSHIRALI0710',
-    githubUrl: 'https://github.com/MUBASSHIRALI0710',
+    demoUrl: 'https://attendpro-ruddy.vercel.app',
+    githubUrl: 'https://github.com/MUBASSHIRALI0710/AttendPro---Smart-Attendance-Management-System',
     featured: true,
     category: 'mern',
     badge: 'Full-Stack MERN',
@@ -221,8 +221,8 @@ export const PROJECTS: Project[] = [
       { label: 'Inference Latency', value: '<95ms' },
       { label: 'Biometrics Analyzed', value: '8 Factors' },
     ],
-    demoUrl: 'https://github.com/MUBASSHIRALI0710',
-    githubUrl: 'https://github.com/MUBASSHIRALI0710',
+    demoUrl: 'https://github.com/MUBASSHIRALI0710/DiabetesDiagnosisAI-ML',
+    githubUrl: 'https://github.com/MUBASSHIRALI0710/DiabetesDiagnosisAI-ML',
     featured: false,
     category: 'ml',
     badge: 'Machine Learning',
