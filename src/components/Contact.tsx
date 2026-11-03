@@ -41,6 +41,7 @@ export function Contact({ onBookCall }: ContactProps) {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
   const [copiedEmail, setCopiedEmail] = useState(false);
 
   const copyEmail = () => {
@@ -51,16 +52,35 @@ export function Contact({ onBookCall }: ContactProps) {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!formData.name || !formData.email || !formData.message) return;
+    setErrorMessage('');
+
+    if (!formData.name.trim()) {
+      setErrorMessage('Please enter your name.');
+      return;
+    }
+    if (!formData.email.trim() || !formData.email.includes('@')) {
+      setErrorMessage('Please enter a valid work email address.');
+      return;
+    }
+    if (!formData.message.trim()) {
+      setErrorMessage('Please enter your project overview & goals.');
+      return;
+    }
 
     setIsSubmitting(true);
 
     try {
-      await fetch('/api/contact', {
+      const res = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData),
       });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        throw new Error(data.error || 'Failed to send message.');
+      }
 
       setIsSubmitting(false);
       setSubmitted(true);
@@ -75,9 +95,10 @@ export function Contact({ onBookCall }: ContactProps) {
       } catch (err) {
         // ignore
       }
-    } catch (err) {
+    } catch (err: unknown) {
       setIsSubmitting(false);
-      setSubmitted(true);
+      const msg = err instanceof Error ? err.message : 'Failed to send message. Please reach out via WhatsApp or email directly.';
+      setErrorMessage(msg);
     }
   };
 
@@ -327,6 +348,13 @@ export function Contact({ onBookCall }: ContactProps) {
                   className="w-full px-3.5 py-2.5 rounded-input bg-surface-elevated border border-border text-sm text-text-primary placeholder:text-text-muted focus:outline-none focus:border-accent transition-colors resize-none"
                 />
               </div>
+
+              {errorMessage && (
+                <div className="p-3 rounded-input bg-red-500/10 border border-red-500/30 text-xs font-mono text-red-500 flex items-center gap-2">
+                  <span>⚠️</span>
+                  <span>{errorMessage}</span>
+                </div>
+              )}
 
               <button
                 type="submit"

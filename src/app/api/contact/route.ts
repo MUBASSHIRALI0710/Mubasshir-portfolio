@@ -64,6 +64,10 @@ export async function POST(req: NextRequest) {
 
       if (error) {
         console.error('Resend delivery error:', error);
+        return NextResponse.json(
+          { error: error.message || 'Failed to send notification via Resend.' },
+          { status: 500 }
+        );
       } else {
         console.log('Lead notification email sent successfully:', data?.id);
       }
