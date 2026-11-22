@@ -5,38 +5,66 @@ export const SITE_URL =
 
 export const PERSONAL_INFO = {
   name: 'Mubasshir Ali',
-  title: 'Software Engineer | Full-Stack & AI-Integrated Systems',
+  title: 'AI / LLM Engineer | Full Stack (Node.js, TypeScript, Next.js)',
   tagline: 'I build AI-powered SaaS tools that ship to production.',
   subline: 'MERN + LLM agents, from idea to deployment. Engineering production-ready web apps with Razorpay billing, webhook idempotency, and zero hallucination risk.',
-  location: 'Bengaluru, India (Available Worldwide Remote)',
+  location: 'Pune, India (Available Worldwide Remote)',
   email: 'mubasshirali0710@gmail.com',
   phone: '+91 70031 51313',
   whatsappUrl: 'https://wa.me/917003151313?text=Hi%20Mubasshir%2C%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project.',
   github: 'https://github.com/MUBASSHIRALI0710',
   linkedin: 'https://linkedin.com/in/mubasshir-ali0710',
+  leetcode: 'https://leetcode.com/u/Mubasshirali0710',
   twitter: 'https://twitter.com/mubasshirali',
   siteUrl: SITE_URL,
   calendly: 'https://calendly.com',
-  status: '🟢 Available for freelance — 2 slots open for Q1 2027',
+  status: '🟢 Available for freelance & engineering roles',
   availabilityDate: '2 slots open for Q1 2027',
   responseTime: 'Usually replies within 24 hours (often under 2 hours)',
   education: {
     institution: 'Maulana Abul Kalam Azad University of Technology, West Bengal',
     degree: 'Bachelor of Technology in Computer Science & Engineering',
     gpa: '8.57 / 10',
+    period: '2020 – 2024',
   },
   experience: {
-    company: 'AiKing Solutions',
-    role: 'Next.js Developer Intern',
-    period: 'Aug 2026 – Present',
+    company: 'A1 Creations, Jaipur',
+    role: 'Full Stack Development & Deployment Engineer',
+    period: 'Oct 2026 – Present',
+    location: 'Remote, Part-time',
     highlights: [
-      'Own full-stack development of NanoBrowser SaaS, a subscription-based AI browser-automation Chrome extension built on an open-source base; architected backend with Node.js, TypeScript, Express.js, and MongoDB.',
-      'Integrated Razorpay payment gateway across a 3-tier subscription model, including webhook-based billing events and a fully verified end-to-end checkout flow.',
-      'Led migration of core LLM infrastructure from OpenAI to AWS Bedrock, integrating Amazon Nova Lite for tool-calling-based browser automation agents.',
-      'Implemented JWT authentication and Zod schema validation across backend APIs; conducted phased security audits and resolved critical and high-severity findings.',
-      'Owned deployment pipeline — MongoDB Atlas production setup and backend deployment on Render — alongside Chrome extension builds and end-to-end testing.'
+      'Independently build new features and modify existing applications across frontend and backend for live client products.',
+      'Integrate third-party APIs and AI services into existing applications.',
+      'Deploy frontends, backends and databases; configure hosting, domains, DNS and SSL.',
+      'Manage GitHub repositories; troubleshoot, debug and maintain live applications.'
     ]
   },
+  experiences: [
+    {
+      company: 'A1 Creations, Jaipur',
+      role: 'Full Stack Development & Deployment Engineer',
+      period: 'Oct 2026 – Present',
+      location: 'Remote, Part-time',
+      highlights: [
+        'Independently build new features and modify existing applications across frontend and backend for live client products.',
+        'Integrate third-party APIs and AI services into existing applications.',
+        'Deploy frontends, backends and databases; configure hosting, domains, DNS and SSL.',
+        'Manage GitHub repositories; troubleshoot, debug and maintain live applications.'
+      ]
+    },
+    {
+      company: 'AiKing Solutions, Pune',
+      role: 'Next.js Developer Intern',
+      period: 'Aug 2026 – Nov 2026',
+      highlights: [
+        'Owned full-stack development of NanoBrowser SaaS, a subscription-based AI Chrome extension that automates LinkedIn Easy Apply using LLM agents.',
+        'Migrated core LLM layer from OpenAI to AWS Bedrock (Amazon Nova Lite) for tool-calling browser agents; designed Planner/Navigator agent architecture.',
+        'Integrated Razorpay with 3-tier subscription plans and webhook-based billing, verified with end-to-end checkout testing.',
+        'Built backend and REST APIs with Node.js, TypeScript, Express.js and MongoDB secured with JWT authentication and Zod request validation.',
+        'Ran security audits and resolved critical and high-severity findings; managed deployment on MongoDB Atlas and Render.'
+      ]
+    }
+  ],
   certifications: [
     'Legacy Responsive Web Design — freeCodeCamp (2026)',
     'C++ Data Structures & Algorithms — Coder Army (2025)'
@@ -221,7 +249,7 @@ export const PROJECTS: Project[] = [
       { label: 'Inference Latency', value: '<95ms' },
       { label: 'Biometrics Analyzed', value: '8 Factors' },
     ],
-    demoUrl: 'https://github.com/MUBASSHIRALI0710/DiabetesDiagnosisAI-ML',
+    demoUrl: 'https://diabetesdiagnosis-ai-ml.onrender.com',
     githubUrl: 'https://github.com/MUBASSHIRALI0710/DiabetesDiagnosisAI-ML',
     featured: false,
     category: 'ml',

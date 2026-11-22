@@ -98,6 +98,7 @@ export default function RootLayout({
     sameAs: [
       PERSONAL_INFO.linkedin,
       PERSONAL_INFO.github,
+      PERSONAL_INFO.leetcode,
       PERSONAL_INFO.twitter,
     ],
     knowsAbout: [

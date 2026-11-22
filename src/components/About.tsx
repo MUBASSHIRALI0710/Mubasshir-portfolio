@@ -76,10 +76,10 @@ export function About({ onBookCall }: AboutProps) {
                 </span>
               </div>
               <p className="text-xs text-white/80 font-mono mt-0.5">
-                Full-Stack &amp; AI Engineer • AiKing Solutions
+                Full-Stack &amp; AI Engineer • A1 Creations
               </p>
               <div className="mt-2 pt-2 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-white/70">
-                <span>Bengaluru, India (IST)</span>
+                <span>Pune, India (IST)</span>
                 <a
                   href="https://wa.me/917003151313"
                   target="_blank"

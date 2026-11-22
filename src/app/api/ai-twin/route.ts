@@ -16,6 +16,35 @@ export interface RAGKnowledgeChunk {
 // Production RAG Knowledge Base — Chunks from Resume, GitHub Projects & Published Technical Deep Dives
 const KNOWLEDGE_CHUNKS: RAGKnowledgeChunk[] = [
   {
+    id: 'exp-a1creations',
+    topic: 'A1 Creations Full Stack Development & Deployment Engineer',
+    keywords: [
+      'a1 creations',
+      'a1',
+      'experience',
+      'current role',
+      'job',
+      'work',
+      'company',
+      'jaipur',
+      'remote',
+      'deployment',
+      'oct 2026',
+    ],
+    content: `Mubasshir Ali currently works as a **Full Stack Development & Deployment Engineer at A1 Creations, Jaipur** (Remote, Part-time | Oct 2026 – Present).
+
+In this role, he:
+- Independently builds new features and modifies existing applications across frontend and backend for live client products.
+- Integrates third-party APIs and AI services into existing production applications.
+- Deploys frontends, backends, and databases; configures cloud hosting, custom domains, DNS records, and SSL certificates.
+- Manages GitHub repositories; troubleshoots, debugs, and maintains high-uptime live client deployments.`,
+    citationLabel: 'Source: A1 Creations Experience (Resume)',
+    citationUrl: '/about',
+    actionType: 'ask_direct',
+    actionPrompt: 'Contact Mubasshir',
+    actionUrl: '/contact',
+  },
+  {
     id: 'exp-aiking',
     topic: 'AiKing Solutions Next.js Developer Internship',
     keywords: [
@@ -26,21 +55,21 @@ const KNOWLEDGE_CHUNKS: RAGKnowledgeChunk[] = [
       'work',
       'job',
       'company',
-      'current role',
       'work history',
       'employer',
       'nanobrowser',
+      'pune',
       'aug 2026',
     ],
-    content: `Mubasshir Ali is currently working as a **Next.js Developer Intern at AiKing Solutions** (Aug 2026 – Present).
+    content: `Mubasshir Ali previously worked as a **Next.js Developer Intern at AiKing Solutions, Pune** (Aug 2026 – Nov 2026).
 
 In this role, he:
-- Owns full-stack development of **NanoBrowser SaaS**, a commercial subscription-based Chrome extension for AI browser automation.
+- Owned full-stack development of **NanoBrowser SaaS**, a commercial subscription-based Chrome extension for AI browser automation.
 - Engineered backend with **Node.js, TypeScript, Express.js, and MongoDB**.
 - Integrated **Razorpay payment webhooks** supporting a 3-tier subscription model with webhook idempotency.
 - Spearheaded the migration of LLM infrastructure from OpenAI to **AWS Bedrock (Amazon Nova Lite)**, cutting operational latency and token costs.
 - Implemented **JWT authentication and Zod schema validation** for bulletproof API security.
-- Deployed and manages production on **Render with MongoDB Atlas**.`,
+- Deployed and managed production on **Render with MongoDB Atlas**.`,
     citationLabel: 'Source: AiKing Solutions Experience (Resume)',
     citationUrl: '/about#experience',
     actionType: 'open_project',
@@ -246,12 +275,15 @@ He achieved an exceptional academic cumulative **GPA of 8.57 / 10**, with primar
       'c++',
     ],
     content: `Mubasshir Ali's verified technical achievements:
-- **200+ Data Structures & Algorithms (DSA) problems solved on LeetCode** (demonstrating strong core fundamentals in arrays, trees, dynamic programming, graphs).
+- **200+ Data Structures & Algorithms (DSA) problems solved on LeetCode** (Profile: leetcode.com/u/Mubasshirali0710 — demonstrating strong fundamentals in arrays, trees, dynamic programming, graphs).
 - **Competitor in the 2023 NASA International Space Apps Challenge** (world's largest hackathon with 57,900+ participants across 152 countries).
 - **Certified in C++ DSA** by Coder Army (2025).
 - **Certified in Legacy Responsive Web Design** by freeCodeCamp (2026).`,
-    citationLabel: 'Source: LeetCode & NASA Achievements (Resume)',
-    citationUrl: '/about#achievements',
+    citationLabel: 'Source: LeetCode Profile & NASA Achievements',
+    citationUrl: 'https://leetcode.com/u/Mubasshirali0710',
+    actionType: 'ask_direct',
+    actionPrompt: 'View LeetCode Profile',
+    actionUrl: 'https://leetcode.com/u/Mubasshirali0710',
   },
   {
     id: 'skills-stack-overview',

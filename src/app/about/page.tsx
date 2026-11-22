@@ -17,8 +17,9 @@ import {
   Terminal,
   ArrowRight,
   ShieldCheck,
+  ExternalLink,
 } from 'lucide-react';
-import { GithubIcon, LinkedinIcon } from '@/components/Icons';
+import { GithubIcon, LinkedinIcon, LeetcodeIcon } from '@/components/Icons';
 
 export const metadata: Metadata = {
   title: 'About Mubasshir Ali — Software Engineer | Full-Stack & AI-Integrated Systems',
@@ -65,18 +66,18 @@ export default function AboutPage() {
     nationality: 'Indian',
     address: {
       '@type': 'PostalAddress',
-      addressLocality: 'Bengaluru',
+      addressLocality: 'Pune',
       addressCountry: 'India',
     },
     email: PERSONAL_INFO.email,
     telephone: PERSONAL_INFO.phone,
     url: `${SITE_URL}/about`,
     image: `${SITE_URL}/images/profile.jpg`,
-    sameAs: [PERSONAL_INFO.linkedin, PERSONAL_INFO.github, PERSONAL_INFO.twitter],
+    sameAs: [PERSONAL_INFO.linkedin, PERSONAL_INFO.github, PERSONAL_INFO.leetcode, PERSONAL_INFO.twitter],
     worksFor: {
       '@type': 'Organization',
-      name: 'AiKing Solutions',
-      jobTitle: 'Next.js Developer Intern',
+      name: 'A1 Creations',
+      jobTitle: 'Full Stack Development & Deployment Engineer',
     },
     alumniOf: {
       '@type': 'EducationalOrganization',
@@ -159,10 +160,10 @@ export default function AboutPage() {
                   </span>
                 </div>
                 <p className="text-xs text-white/80 font-mono mt-0.5">
-                  Software Engineer • Full-Stack &amp; AI
+                  AI &amp; Full-Stack Engineer • A1 Creations
                 </p>
                 <div className="mt-2 pt-2 border-t border-white/10 flex items-center justify-between text-[11px] font-mono text-white/70">
-                  <span>Bengaluru, India (IST)</span>
+                  <span>Pune, India (IST)</span>
                   <a
                     href="https://wa.me/917003151313"
                     target="_blank"
@@ -179,7 +180,9 @@ export default function AboutPage() {
             <div className="p-5 rounded-card bg-surface border border-border space-y-3 text-xs font-mono">
               <div className="flex items-center justify-between pb-2 border-b border-border">
                 <span className="text-text-muted">Current Role</span>
-                <span className="font-semibold text-text-primary">Next.js Dev Intern @ AiKing</span>
+                <span className="font-semibold text-text-primary text-right max-w-[190px] truncate" title="Full Stack Development & Deployment Engineer @ A1 Creations">
+                  Full Stack Eng @ A1 Creations
+                </span>
               </div>
               <div className="flex items-center justify-between pb-2 border-b border-border">
                 <span className="text-text-muted">Degree &amp; GPA</span>
@@ -193,7 +196,16 @@ export default function AboutPage() {
               </div>
               <div className="flex items-center justify-between pb-2 border-b border-border">
                 <span className="text-text-muted">DSA Solving</span>
-                <span className="font-bold text-emerald-500">200+ LeetCode Problems</span>
+                <a
+                  href={PERSONAL_INFO.leetcode}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-bold text-emerald-500 hover:underline flex items-center gap-1"
+                  title="View Mubasshir Ali on LeetCode"
+                >
+                  <span>200+ LeetCode</span>
+                  <ExternalLink className="w-3 h-3" />
+                </a>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-text-muted">Competition</span>
@@ -210,13 +222,14 @@ export default function AboutPage() {
               <span>Download Official Resume (PDF)</span>
             </a>
 
-            {/* Social channels */}
-            <div className="flex items-center gap-3">
+            {/* Social channels: GitHub, LinkedIn & LeetCode */}
+            <div className="flex items-center gap-2">
               <a
                 href={PERSONAL_INFO.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 p-2.5 rounded-input bg-surface border border-border text-xs font-mono flex items-center justify-center gap-2 text-text-secondary hover:text-text-primary hover:border-text-secondary transition-colors"
+                className="flex-1 p-2 rounded-input bg-surface border border-border text-xs font-mono flex items-center justify-center gap-1.5 text-text-secondary hover:text-text-primary hover:border-text-secondary transition-colors"
+                title="GitHub Profile"
               >
                 <GithubIcon className="w-4 h-4" />
                 <span>GitHub</span>
@@ -225,10 +238,21 @@ export default function AboutPage() {
                 href={PERSONAL_INFO.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 p-2.5 rounded-input bg-surface border border-border text-xs font-mono flex items-center justify-center gap-2 text-text-secondary hover:text-text-primary hover:border-text-secondary transition-colors"
+                className="flex-1 p-2 rounded-input bg-surface border border-border text-xs font-mono flex items-center justify-center gap-1.5 text-text-secondary hover:text-text-primary hover:border-text-secondary transition-colors"
+                title="LinkedIn Profile"
               >
                 <LinkedinIcon className="w-4 h-4" />
                 <span>LinkedIn</span>
+              </a>
+              <a
+                href={PERSONAL_INFO.leetcode}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex-1 p-2 rounded-input bg-surface border border-border text-xs font-mono flex items-center justify-center gap-1.5 text-text-secondary hover:text-text-primary hover:border-text-secondary transition-colors"
+                title="LeetCode Profile"
+              >
+                <LeetcodeIcon className="w-4 h-4 text-amber-500" />
+                <span>LeetCode</span>
               </a>
             </div>
           </div>
@@ -248,14 +272,56 @@ export default function AboutPage() {
               </p>
             </div>
 
+            {/* Experience Card: A1 Creations */}
+            <div className="p-6 rounded-card bg-surface border border-border space-y-3">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-2 text-accent font-bold text-sm font-mono uppercase">
+                  <Briefcase className="w-4 h-4" />
+                  <span>A1 Creations, Jaipur</span>
+                </div>
+                <span className="text-xs font-mono text-emerald-500 font-semibold bg-emerald-500/10 px-2 py-0.5 rounded">
+                  Oct 2026 – Present
+                </span>
+              </div>
+              <div className="text-base font-bold font-heading text-text-primary">
+                Full Stack Development &amp; Deployment Engineer (Remote, Part-time)
+              </div>
+              <ul className="space-y-2 text-xs sm:text-sm text-text-secondary pt-2">
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                  <span>
+                    Independently build new features and modify existing applications across frontend and backend for live client products.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                  <span>
+                    Integrate third-party APIs and AI services into existing production applications.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                  <span>
+                    Deploy frontends, backends and databases; configure cloud hosting, custom domains, DNS records, and SSL certificates.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                  <span>
+                    Manage GitHub repositories; troubleshoot, debug and maintain high-uptime live client deployments.
+                  </span>
+                </li>
+              </ul>
+            </div>
+
             {/* Experience Card: AiKing Solutions */}
             <div className="p-6 rounded-card bg-surface border border-border space-y-3">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-2 text-accent font-bold text-sm font-mono uppercase">
                   <Briefcase className="w-4 h-4" />
-                  <span>AiKing Solutions</span>
+                  <span>AiKing Solutions, Pune</span>
                 </div>
-                <span className="text-xs font-mono text-text-muted">Aug 2026 – Present</span>
+                <span className="text-xs font-mono text-text-muted">Aug 2026 – Nov 2026</span>
               </div>
               <div className="text-base font-bold font-heading text-text-primary">
                 Next.js Developer Intern
@@ -264,7 +330,7 @@ export default function AboutPage() {
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-0.5" />
                   <span>
-                    Own full-stack development of <strong>NanoBrowser SaaS</strong>, a subscription-based AI browser automation Chrome extension; architected backend with Node.js, TypeScript, Express.js, and MongoDB.
+                    Owned full-stack development of <strong>NanoBrowser SaaS</strong>, a subscription-based AI browser automation Chrome extension; architected backend with Node.js, TypeScript, Express.js, and MongoDB.
                   </span>
                 </li>
                 <li className="flex items-start gap-2">

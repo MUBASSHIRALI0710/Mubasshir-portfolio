@@ -21,7 +21,7 @@ import { PERSONAL_INFO, SITE_URL } from '@/data/portfolioData';
 export const metadata: Metadata = {
   title: 'Now — What Mubasshir Ali is Doing Right Now (October 2026)',
   description:
-    'A live /now page by Mubasshir Ali, Software Engineer & AI Builder based in Bengaluru, India. Current builds, reading list, and freelance availability.',
+    'A live /now page by Mubasshir Ali, AI / Full-Stack Engineer based in Pune, India. Current builds, client deployments, reading list, and freelance availability.',
   alternates: {
     canonical: `${SITE_URL}/now`,
   },
@@ -90,7 +90,7 @@ export default function NowPage() {
         <div className="mt-8 p-4 rounded-xl bg-surface border border-border flex flex-wrap items-center justify-between gap-4 text-xs font-mono">
           <div className="flex items-center gap-2 text-text-secondary">
             <MapPin className="w-4 h-4 text-accent shrink-0" />
-            <span>Bengaluru, Karnataka, India (UTC +5:30 IST)</span>
+            <span>Pune, Maharashtra, India (UTC +5:30 IST)</span>
           </div>
           <div className="flex items-center gap-2 text-text-secondary">
             <Clock className="w-4 h-4 text-text-muted shrink-0" />
@@ -105,7 +105,7 @@ export default function NowPage() {
             <div className="flex items-center gap-2.5 text-accent">
               <Cpu className="w-5 h-5" />
               <h2 className="text-lg font-bold font-heading text-text-primary">
-                1. What I&apos;m Building
+                1. What I&apos;m Building &amp; Shipping
               </h2>
             </div>
             <ul className="space-y-3 text-sm text-text-secondary leading-relaxed">
@@ -113,9 +113,18 @@ export default function NowPage() {
                 <CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-0.5" />
                 <div>
                   <strong className="text-text-primary font-medium">
+                    Client Full-Stack Products &amp; Deployments (A1 Creations):
+                  </strong>{' '}
+                  Building features, integrating third-party AI APIs, configuring custom DNS/SSL, and deploying live production frontends, backends, and databases.
+                </div>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="w-4 h-4 text-accent shrink-0 mt-0.5" />
+                <div>
+                  <strong className="text-text-primary font-medium">
                     NanoBrowser SaaS (AI Browser Automation Chrome Extension):
                   </strong>{' '}
-                  At AiKing Solutions, I own full-stack development of a commercial SaaS product with
+                  At AiKing Solutions, I owned full-stack development of a commercial SaaS product with
                   dual-agent Planner/Navigator workflows using Amazon Nova Lite via AWS Bedrock and
                   3-tier Razorpay subscription billing.
                 </div>

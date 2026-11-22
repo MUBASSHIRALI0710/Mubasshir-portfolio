@@ -69,8 +69,14 @@ export function Footer() {
           <a href="/now" className="text-text-secondary hover:text-accent transition-colors">
             /now
           </a>
-          <a href="/uses" className="text-text-secondary hover:text-accent transition-colors">
-            /uses
+          <a href="https://github.com/MUBASSHIRALI0710" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">
+            GitHub
+          </a>
+          <a href="https://leetcode.com/u/Mubasshirali0710" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">
+            LeetCode
+          </a>
+          <a href="https://linkedin.com/in/mubasshir-ali0710" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent transition-colors">
+            LinkedIn
           </a>
           <a href="/contact" className="text-text-secondary hover:text-accent transition-colors">
             Contact

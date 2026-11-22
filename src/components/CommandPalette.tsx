@@ -20,7 +20,7 @@ import {
   ExternalLink,
   Laptop,
 } from 'lucide-react';
-import { GithubIcon } from '@/components/Icons';
+import { GithubIcon, LeetcodeIcon } from '@/components/Icons';
 import { PROJECTS, SERVICES, PERSONAL_INFO } from '@/data/portfolioData';
 import { BLOG_POSTS } from '@/data/blogData';
 
@@ -141,6 +141,19 @@ export function CommandPalette({
         action: () => {
           onClose();
           window.open(PERSONAL_INFO.github, '_blank');
+        },
+      },
+      {
+        id: 'action-leetcode',
+        title: 'View LeetCode Profile (200+ Solved)',
+        subtitle: 'leetcode.com/u/Mubasshirali0710 • Data Structures & Algorithms',
+        category: 'Actions',
+        icon: LeetcodeIcon,
+        badge: 'DSA 200+',
+        keywords: ['leetcode', 'dsa', 'algorithms', 'data structures', 'problem solving', 'coding', 'solutions'],
+        action: () => {
+          onClose();
+          window.open(PERSONAL_INFO.leetcode, '_blank');
         },
       },
       {
